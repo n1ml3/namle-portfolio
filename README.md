@@ -149,7 +149,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Screenshots
 
-![Portfolio Dark Mode](path-to-dark-mode-screenshot.png)
 ![image](https://github.com/user-attachments/assets/5628d3e8-d11a-4e02-815c-41f6a69049ca)
 
 ---
