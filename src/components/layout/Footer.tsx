@@ -8,7 +8,7 @@ export function Footer() {
         <AnimatedSection animation="fadeIn" delay={100}>
           <div className="text-center">
             <p className="text-gray-400 dark:text-gray-500 mb-4">
-              © 2024 Portfolio. Được tạo với ❤️ bằng React và Tailwind CSS.
+              © 2024 Portfolio. Được tạo với ❤️ Namle bằng React và Tailwind CSS.
             </p>
             <SocialLinks />
           </div>
