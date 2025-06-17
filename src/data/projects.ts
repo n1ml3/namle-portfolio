@@ -35,7 +35,7 @@ export const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&h=300&fit=crop&auto=format",
     technologies: ["React", "TypeScript", "Tailwind CSS", "Vite", "Framer Motion"],
     github: "https://github.com/n1ml3/namle-portfolio",
-    demo: "https://your-portfolio.vercel.app",
+    demo: "https://namle-portfolio.vercel.app/",
   },
   {
     title: "Social Media App",
