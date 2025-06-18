@@ -15,8 +15,8 @@ export const projects: Project[] = [
     description:
       "Ứng dụng quản lý công việc với tính năng kéo thả và cộng tác nhóm. Hỗ trợ real-time updates, notifications và team collaboration.",
     image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop&auto=format",
-    technologies: ["React", "TypeScript", "PHP - lavarel", "Tailwind", "Framer Motion"],
-    github: "https://github.com/yourusername/task-management",
+    technologies: ["NextJS14", "TypeScript", "Tailwind", "Framer Motion", "Radix UI"],
+    github: "https://github.com/n1ml3/task-management-app",
     demo: "https://your-task-app-demo.vercel.app",
   },
   {
