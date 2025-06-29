@@ -47,12 +47,12 @@ export const projects: Project[] = [
     demo: "https://your-social-app-demo.vercel.app",
   },
   {
-    title: "Crypto Trading Bot",
+    title: "Dự đoán bệnh tiểu đường",
     description:
-      "Bot trading cryptocurrency tự động với AI prediction và risk management. Tích hợp với Binance API và Telegram notifications.",
+      "Sử dụng machine learning để dự đoán nguy cơ mắc bệnh tiểu đường dựa trên các chỉ số sức khỏe. Ứng dụng này sử dụng mô hình random forest và có thể giúp người dùng theo dõi sức khỏe của mình.",
     image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=500&h=300&fit=crop&auto=format",
-    technologies: ["Python", "TensorFlow", "Binance API", "PostgreSQL", "Docker"],
-    github: "https://github.com/yourusername/crypto-trading-bot",
-    demo: "https://your-crypto-bot-demo.vercel.app",
+    technologies: ["Python", "Random Forest", "Flask", "Pandas", "NumPy"],
+    github: "https://github.com/n1ml3/diabetes-prediction-model",
+    demo: "",
   },
 ]
