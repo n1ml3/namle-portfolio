@@ -1,11 +1,11 @@
-import { Code, Palette, Smartphone } from "lucide-react"
+import { Code, Palette} from "lucide-react"
 import type { Skill, SkillCategory } from "../types"
 
 export const skills = {
   mainSkills: [
     { name: "Frontend Development", icon: Code, level: 90 },
     { name: "UI/UX Design", icon: Palette, level: 85 },
-    { name: "Mobile Development", icon: Smartphone, level: 75 },
+    { name: "Machine Learning", icon: Code, level: 90 },
   ] as Skill[],
 
   categories: [
@@ -25,9 +25,9 @@ export const skills = {
       items: ["Git", "Docker", "AWS", "Figma"],
     },
     {
-      name: "Mobile",
+      name: "Machine Learning",
       color: "orange",
-      items: ["React Native", "Flutter", "Expo"],
+      items: ["Python", "TensorFlow", "Scikit-learn", "Flask", "Random Forest"],
     },
   ] as SkillCategory[],
 }
