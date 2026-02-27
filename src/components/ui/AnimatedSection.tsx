@@ -16,7 +16,7 @@ export function AnimatedSection({
   duration = 600,
   className = "",
 }: AnimatedSectionProps) {
-  const { elementRef, isVisible } = useScrollAnimation()
+  const { elementRef, isVisible } = useScrollAnimation<HTMLDivElement>()
 
   const getAnimationClasses = () => {
     const baseClasses = "transition-all ease-out"

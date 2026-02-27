@@ -26,13 +26,22 @@ export function Hero() {
 
             <AnimatedSection animation="slideLeft" delay={600}>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-blue-600 dark:bg-blue-500 text-white px-8 py-3 rounded-lg hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors flex items-center justify-center gap-2 hover:scale-105 transform duration-200">
+                <a 
+                  href="/cv.pdf"
+                  download="CV_LeDucNam.pdf"
+                  className="bg-blue-600 dark:bg-blue-500 text-white px-8 py-3 rounded-lg hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors flex items-center justify-center gap-2 hover:scale-105 transform duration-200"
+                >
                   <Download size={20} />
                   Tải CV
-                </button>
-                <button className="border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 px-8 py-3 rounded-lg hover:bg-blue-600 dark:hover:bg-blue-400 hover:text-white dark:hover:text-white transition-colors hover:scale-105 transform duration-200">
-                  Xem dự án
-                </button>
+                </a>
+                <a 
+                  href="/cv.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 px-8 py-3 rounded-lg hover:bg-blue-600 dark:hover:bg-blue-400 hover:text-white dark:hover:text-white transition-colors flex items-center justify-center hover:scale-105 transform duration-200"
+                >
+                  Xem CV
+                </a>
               </div>
             </AnimatedSection>
           </div>
