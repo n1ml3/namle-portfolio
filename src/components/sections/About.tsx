@@ -18,8 +18,7 @@ export function About({ stats }: AboutProps) {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Giới thiệu về tôi</h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Với hơn 3 năm kinh nghiệm trong phát triển web, tôi đã tham gia vào nhiều dự án từ startup đến doanh
-              nghiệp lớn.
+              Có niềm đam mê to lớn với lập trình fullstack, yêu thích tìm hiểu các thư viện mới. Luôn cố gắng học hỏi và phát triển bản thân mỗi ngày.
             </p>
           </div>
         </AnimatedSection>
@@ -41,7 +40,7 @@ export function About({ stats }: AboutProps) {
             <AnimatedSection animation="slideRight" delay={400}>
               <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
                 Tôi bắt đầu hành trình lập trình từ năm 2022 với niềm đam mê tạo ra những sản phẩm có ý nghĩa. Qua thời
-                gian, tôi đã phát triển kỹ năng trong nhiều lĩnh vực từ frontend, nghiên cứu AI và phát triển hệ thống backend. Có kinh nghiệm triển khaimô  hình  Random  Forest,  xây  dựng  áp  dụng  API  và  ứng  dụng  thực  tế.
+                gian, tôi đã phát triển kỹ năng trong nhiều lĩnh vực từ frontend, phát triển hệ thống backend. Xây dựng nhiều ứng dụng web có áp dụng nhiều công nghệ khác nhau.
               </p>
             </AnimatedSection>
 
