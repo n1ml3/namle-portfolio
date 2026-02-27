@@ -32,7 +32,7 @@ export const projects: Project[] = [
     title: "Portfolio Website",
     description:
       "Website portfolio cá nhân với dark mode, scroll animations và responsive design. Được xây dựng với React, TypeScript và Tailwind CSS.",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&h=300&fit=crop&auto=format",
+    image: "https://private-user-images.githubusercontent.com/129405738/452610013-5628d3e8-d11a-4e02-815c-41f6a69049ca.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzIyMTAxMTMsIm5iZiI6MTc3MjIwOTgxMywicGF0aCI6Ii8xMjk0MDU3MzgvNDUyNjEwMDEzLTU2MjhkM2U4LWQxMWEtNGUwMi04MTVjLTQxZjZhNjkwNDljYS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwMjI3JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDIyN1QxNjMwMTNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1hYjdjODQ5NzdlYTI1MWM0NzVmODU1YWUyODJmODE4MDdkMDYyMzg1NDkyMDZmYWRkYTA4YjYwYTA5OTgzZWM1JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.BEO79AaaMKMVv8pl1-HtcIgCFjpLhvnhNzQbBWLLBiA",
     technologies: ["React", "TypeScript", "Tailwind CSS", "Vite", "Framer Motion"],
     github: "https://github.com/n1ml3/namle-portfolio",
     demo: "https://namle-portfolio.vercel.app/",
