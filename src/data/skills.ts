@@ -17,7 +17,7 @@ export const skills = {
     {
       name: "Backend",
       color: "green",
-      items: ["Node.js", "Express", "MongoDB", "PostgreSQL"],
+      items: ["Node.js", "ExpressJS", "MongoDB", "PostgreSQL"],
     },
     {
       name: "Tools",
