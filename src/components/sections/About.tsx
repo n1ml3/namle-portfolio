@@ -26,9 +26,9 @@ export function About({ stats }: AboutProps) {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <AnimatedSection animation="slideLeft" delay={200}>
             <img
-              src="https://i.pinimg.com/736x/ad/f3/ec/adf3ec750c697a1352fc82916a78ae4f.jpg"
+              src="/about-image.jpg"
               alt="About me"
-              className="rounded-lg shadow-lg dark:shadow-2xl hover:scale-105 transition-transform duration-300"
+              className="rounded-lg shadow-lg dark:shadow-2xl hover:scale-105 transition-transform duration-300 object-cover"
             />
           </AnimatedSection>
 
