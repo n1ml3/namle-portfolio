@@ -42,7 +42,7 @@ export const projects: Project[] = [
     description:
       "Đây là ứng dụng quản lý công việc (Todo App) hoàn chỉnh được xây dựng bằng Flutter và Dart.",
     image: "https://private-user-images.githubusercontent.com/129405738/525157955-f8ab735b-f223-41b1-8476-6463118625a2.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzIyMDk5MzQsIm5iZiI6MTc3MjIwOTYzNCwicGF0aCI6Ii8xMjk0MDU3MzgvNTI1MTU3OTU1LWY4YWI3MzViLWYyMjMtNDFiMS04NDc2LTY0NjMxMTg2MjVhMi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwMjI3JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDIyN1QxNjI3MTRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT00ZTQyOGRhNjdjYzgwMWNlMDdjZjMyNDUyMjE2NTA2NDVjOTI5MWI3Zjk2MmFmOTNhNjlkOTFlOGZhYTg0MWFiJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.hTbPnJvUDZqE4U4_slI8RBO8DUkcwgSvoqshvY9rjnk",
-    technologies: ["Flutter", "Dart", "MongoDB"],
+    technologies: ["Flutter", "Dart", "Firebase"],
     github: "https://github.com/HUMG-IT/flutter-final-project-n1ml3?tab=readme-ov-file",
     demo: "",
   },
