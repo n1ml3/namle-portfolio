@@ -8,7 +8,7 @@ export const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop&auto=format",
     technologies: ["React", "Node.js", "MongoDB", "Stripe", "Express"],
     github: "https://github.com/n1ml3/commerce-backend",
-    demo: "",
+    demo: "https://commerce-frontend-brown.vercel.app/login",
   },
   {
     title: "Task Management App",
