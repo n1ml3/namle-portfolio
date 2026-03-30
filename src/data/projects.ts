@@ -32,7 +32,7 @@ export const projects: Project[] = [
     title: "Portfolio Website",
     description:
       "Website portfolio cá nhân với dark mode, scroll animations và responsive design. Được xây dựng với React, TypeScript và Tailwind CSS.",
-    image: "/portfolio-pic.jpeg",
+    image: "/portfoliopage.png",
     technologies: ["React", "TypeScript", "Tailwind CSS", "Vite", "Framer Motion"],
     github: "https://github.com/n1ml3/namle-portfolio",
     demo: "https://namle-portfolio.vercel.app/",
