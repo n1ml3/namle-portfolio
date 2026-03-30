@@ -31,7 +31,7 @@ export function Skills({ skills }: SkillsProps) {
           ))}
         </div>
 
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
           {categories.map((category, categoryIndex) => (
             <AnimatedSection key={category.name} animation="slideUp" delay={600 + categoryIndex * 150}>
               <div className="text-center hover:scale-105 transition-transform duration-200">

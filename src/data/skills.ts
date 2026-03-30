@@ -12,12 +12,12 @@ export const skills = {
     {
       name: "Frontend",
       color: "blue",
-      items: ["React", "Vue.js", "TypeScript", "Tailwind CSS"],
+      items: ["HTML", "CSS (Bootstrap)", "JavaScript (React)"],
     },
     {
       name: "Backend",
       color: "green",
-      items: ["Node.js", "ExpressJS", "MongoDB", "PostgreSQL"],
+      items: ["Node.js", "PHP", "Python"],
     },
     {
       name: "Tools",
@@ -28,6 +28,11 @@ export const skills = {
       name: "Machine Learning",
       color: "orange",
       items: ["Python", "TensorFlow", "Scikit-learn", "Flask", "Random Forest"],
+    },
+    {
+      name: "Database",
+      color: "red",
+      items: ["MySQL", "PostgreSQL", "MongoDB"],
     },
   ] as SkillCategory[],
 }
