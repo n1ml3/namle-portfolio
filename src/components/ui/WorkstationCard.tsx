@@ -1,4 +1,4 @@
-import { Laptop, Cpu, MemoryStick, Zap, HardDrive, Keyboard, Mouse } from "lucide-react"
+import { Cpu, MemoryStick, Zap, HardDrive, Keyboard, Mouse } from "lucide-react"
 import { AnimatedSection } from "./AnimatedSection"
 import type { HardwareSpec } from "../../types"
 
