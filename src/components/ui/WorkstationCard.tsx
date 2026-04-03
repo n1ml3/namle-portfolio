@@ -20,7 +20,7 @@ export function WorkstationCard() {
     },
     {
       label: "GPU",
-      value: "NVIDIA RTX 3050Ti 4GB",
+      value: "NVIDIA RTX 3050Ti 4GB laptop",
       icon: Zap,
     },
     {
