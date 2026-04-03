@@ -20,3 +20,8 @@ export interface SkillCategory {
   color: string
   items: string[]
 }
+export interface HardwareSpec {
+  label: string
+  value: string
+  icon: LucideIcon
+}

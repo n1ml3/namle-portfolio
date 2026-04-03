@@ -1,5 +1,6 @@
 import { AnimatedSection } from "../ui/AnimatedSection"
 import { StatItem } from "../ui/StatItem"
+import { WorkstationCard } from "../ui/WorkstationCard"
 
 export interface Stat {
   label: string
@@ -23,7 +24,7 @@ export function About({ stats }: AboutProps) {
           </div>
         </AnimatedSection>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <AnimatedSection animation="slideLeft" delay={200}>
             <img
               src="/about-image.jpg"
@@ -59,6 +60,10 @@ export function About({ stats }: AboutProps) {
               </div>
             </AnimatedSection>
           </div>
+        </div>
+
+        <div className="border-t border-gray-100 dark:border-gray-800 pt-12">
+          <WorkstationCard />
         </div>
       </div>
     </section>
