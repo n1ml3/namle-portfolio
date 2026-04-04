@@ -12,7 +12,6 @@ export interface Project {
 export interface Skill {
   name: string
   icon: LucideIcon
-  level: number
 }
 
 export interface SkillCategory {

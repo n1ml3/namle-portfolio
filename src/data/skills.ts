@@ -3,9 +3,9 @@ import type { Skill, SkillCategory } from "../types"
 
 export const skills = {
   mainSkills: [
-    { name: "Frontend Development", icon: Code, level: 90 },
-    { name: "UI/UX Design", icon: Palette, level: 85 },
-    { name: "Machine Learning", icon: Code, level: 90 },
+    { name: "Frontend Development", icon: Code },
+    { name: "UI/UX Design", icon: Palette },
+    { name: "Machine Learning", icon: Code },
   ] as Skill[],
 
   categories: [
