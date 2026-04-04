@@ -28,7 +28,19 @@ export function Interests() {
     e.preventDefault()
     const x = e.pageX - (scrollRef.current.offsetLeft || 0)
     const walk = (x - startX.current) * 2
-    scrollRef.current.scrollLeft = scrollLeftStart.current - walk
+    let newScrollLeft = scrollLeftStart.current - walk
+
+    // Loop during drag
+    const oneThird = scrollRef.current.scrollWidth / 3
+    if (newScrollLeft >= 2 * oneThird) {
+      newScrollLeft -= oneThird
+      scrollLeftStart.current -= oneThird
+    } else if (newScrollLeft <= 0) {
+      newScrollLeft += oneThird
+      scrollLeftStart.current += oneThird
+    }
+
+    scrollRef.current.scrollLeft = newScrollLeft
   }
 
   const handleMouseUp = () => {
@@ -39,8 +51,8 @@ export function Interests() {
     }
   }
 
-  // Duplicating interests to create an infinite scroll effect
-  const displayInterests = [...interests, ...interests]
+  // Triplicating interests to create a seamless infinite scroll effect
+  const displayInterests = [...interests, ...interests, ...interests]
 
   // Handle looping logic
   useEffect(() => {
@@ -48,22 +60,35 @@ export function Interests() {
       if (!scrollRef.current || isDragging.current) return
       
       const { scrollLeft, scrollWidth } = scrollRef.current
-      const halfWidth = scrollWidth / 2
+      const oneThird = scrollWidth / 3
 
-      if (scrollLeft >= halfWidth) {
-        scrollRef.current.scrollLeft = scrollLeft - halfWidth
+      if (scrollLeft >= 2 * oneThird) {
+        scrollRef.current.scrollLeft = scrollLeft - oneThird
       } else if (scrollLeft <= 0) {
-        scrollRef.current.scrollLeft = halfWidth
+        scrollRef.current.scrollLeft = oneThird
       }
     }
 
     const container = scrollRef.current
     if (container) {
       container.addEventListener("scroll", handleScroll)
-      container.scrollLeft = 0
+      
+      // Set initial position to the middle set
+      const updatePosition = () => {
+        if (container.scrollWidth > 0) {
+          const oneThird = container.scrollWidth / 3
+          container.scrollLeft = oneThird
+        }
+      }
+      
+      updatePosition()
+      // Small timeout to ensure correctly calculated scrollWidth after render
+      const timeoutId = setTimeout(updatePosition, 100)
+      return () => {
+        container.removeEventListener("scroll", handleScroll)
+        clearTimeout(timeoutId)
+      }
     }
-
-    return () => container?.removeEventListener("scroll", handleScroll)
   }, [])
 
   return (
