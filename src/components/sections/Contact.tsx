@@ -5,9 +5,9 @@ import { Mail, Github, Linkedin } from "lucide-react"
 
 export function Contact() {
   const contactItems = [
-    { icon: Mail, title: "Email", value: "namle26022004@gmail.com" },
-    { icon: Github, title: "GitHub", value: "github.com/n1ml3" },
-    { icon: Linkedin, title: "LinkedIn", value: "https://www.linkedin.com/in/lê-nam-296791368" },
+    { icon: Mail, title: "Email", value: "namle26022004@gmail.com", link: "mailto:namle26022004@gmail.com" },
+    { icon: Github, title: "GitHub", value: "github.com/n1ml3", link: "https://github.com/n1ml3" },
+    { icon: Linkedin, title: "LinkedIn", value: "Lê Nam", link: "https://www.linkedin.com/in/lê-nam-296791368" },
   ]
 
   return (
