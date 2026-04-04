@@ -13,7 +13,8 @@ export function InterestCard({ interest }: InterestCardProps) {
       <img
         src={interest.image}
         alt={interest.title}
-        className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 grayscale-[0.2] group-hover:grayscale-0"
+        draggable="false"
+        className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 grayscale-[0.2] group-hover:grayscale-0 select-none"
       />
       
       {/* Intense Shine effect on hover */}

@@ -13,19 +13,19 @@ export function Interests() {
   const scrollLeftStart = useRef(0)
 
   // Handle drag scrolling
-  const handleMouseDown = (e: React.MouseEvent) => {
+  const handlePointerDown = (e: React.PointerEvent) => {
     isDragging.current = true
     startX.current = e.pageX - (scrollRef.current?.offsetLeft || 0)
     scrollLeftStart.current = scrollRef.current?.scrollLeft || 0
     if (scrollRef.current) {
       scrollRef.current.style.scrollBehavior = 'auto'
       scrollRef.current.style.cursor = 'grabbing'
+      scrollRef.current.setPointerCapture(e.pointerId)
     }
   }
 
-  const handleMouseMove = (e: React.MouseEvent) => {
+  const handlePointerMove = (e: React.PointerEvent) => {
     if (!isDragging.current || !scrollRef.current) return
-    e.preventDefault()
     
     const x = e.pageX - (scrollRef.current.offsetLeft || 0)
     const walk = (x - startX.current) * 2
@@ -49,7 +49,7 @@ export function Interests() {
     scrollRef.current.scrollLeft = newScrollLeft
   }
 
-  const handleMouseUp = () => {
+  const handlePointerUp = () => {
     isDragging.current = false
     if (scrollRef.current) {
       scrollRef.current.style.scrollBehavior = 'smooth'
@@ -113,15 +113,16 @@ export function Interests() {
           {/* Scrolling Container */}
           <div
             ref={scrollRef}
-            onMouseDown={handleMouseDown}
-            onMouseMove={handleMouseMove}
-            onMouseUp={handleMouseUp}
-            onMouseLeave={handleMouseUp}
+            onPointerDown={handlePointerDown}
+            onPointerMove={handlePointerMove}
+            onPointerUp={handlePointerUp}
+            onPointerCancel={handlePointerUp}
             className="flex gap-8 overflow-x-auto pb-12 pt-4 px-2 no-scrollbar scroll-smooth cursor-grab active:cursor-grabbing select-none"
             style={{
               msOverflowStyle: 'none',
               scrollbarWidth: 'none',
-              WebkitOverflowScrolling: 'touch'
+              WebkitOverflowScrolling: 'touch',
+              touchAction: 'pan-y'
             }}
           >
             {displayInterests.map((interest, index) => (
