@@ -8,6 +8,7 @@ import { About } from "./components/sections/About"
 import { Skills } from "./components/sections/Skills"
 import { Projects } from "./components/sections/Projects"
 import { Contact } from "./components/sections/Contact"
+import { ScrollToTop } from "./components/ui/ScrollToTop"
 import { projects } from "./data/projects"
 import { skills } from "./data/skills"
 import { aboutStats } from "./data/about"
@@ -51,6 +52,7 @@ export default function Portfolio() {
       <Projects projects={projects} />
       <Contact />
       <Footer />
+      <ScrollToTop />
     </div>
   )
 }
