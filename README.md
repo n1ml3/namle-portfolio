@@ -4,13 +4,13 @@ A modern, responsive portfolio website built with React, TypeScript, and Tailwin
 
 ## Features
 
-- 🌓 Dark/Light mode with system preference detection
-- 🎯 Smooth scroll animations with Intersection Observer
-- 📱 Fully responsive design with mobile menu
-- ⚡ Built with Vite for fast development
-- 🎨 Customizable with Tailwind CSS variables
-- 🔍 SEO optimized
-- 💫 Interactive UI components and transitions
+- Dark/Light mode with system preference detection
+- Smooth scroll animations with Intersection Observer
+- Fully responsive design with mobile menu
+- Built with Vite for fast development
+- Customizable with Tailwind CSS variables
+- SEO optimized
+- Interactive UI components and transitions
 
 ## Technologies Used
 
