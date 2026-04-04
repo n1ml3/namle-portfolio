@@ -58,7 +58,7 @@ export function Interests() {
   useEffect(() => {
     const handleScroll = () => {
       if (!scrollRef.current || isDragging.current) return
-      
+
       const { scrollLeft, scrollWidth } = scrollRef.current
       const oneThird = scrollWidth / 3
 
@@ -72,7 +72,7 @@ export function Interests() {
     const container = scrollRef.current
     if (container) {
       container.addEventListener("scroll", handleScroll)
-      
+
       // Set initial position to the middle set
       const updatePosition = () => {
         if (container.scrollWidth > 0) {
@@ -80,7 +80,7 @@ export function Interests() {
           container.scrollLeft = oneThird
         }
       }
-      
+
       updatePosition()
       // Small timeout to ensure correctly calculated scrollWidth after render
       const timeoutId = setTimeout(updatePosition, 100)
@@ -112,10 +112,10 @@ export function Interests() {
             onMouseUp={handleMouseUp}
             onMouseLeave={handleMouseUp}
             className="flex gap-8 overflow-x-auto pb-12 pt-4 px-2 no-scrollbar scroll-smooth cursor-grab active:cursor-grabbing select-none"
-            style={{ 
-                msOverflowStyle: 'none', 
-                scrollbarWidth: 'none',
-                WebkitOverflowScrolling: 'touch' 
+            style={{
+              msOverflowStyle: 'none',
+              scrollbarWidth: 'none',
+              WebkitOverflowScrolling: 'touch'
             }}
           >
             {displayInterests.map((interest, index) => (
@@ -124,7 +124,7 @@ export function Interests() {
           </div>
         </div>
       </div>
-      
+
       {/* CSS for hiding scrollbar */}
       <style>{`
         .no-scrollbar::-webkit-scrollbar {
