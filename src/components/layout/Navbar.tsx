@@ -16,7 +16,7 @@ export function Navbar({ isDarkMode, toggleTheme }: NavbarProps) {
     setIsMenuOpen(!isMenuOpen)
   }
 
-  const navItems = ["Trang chủ", "Giới thiệu", "Kỹ năng", "Dự án", "Liên hệ"]
+  const navItems = ["Trang chủ", "Giới thiệu", "Kỹ năng", "Dự án", "Sở thích", "Liên hệ"]
   const getHref = (item: string) => {
     switch (item) {
       case "Trang chủ":
@@ -27,6 +27,8 @@ export function Navbar({ isDarkMode, toggleTheme }: NavbarProps) {
         return "#skills"
       case "Dự án":
         return "#projects"
+      case "Sở thích":
+        return "#interests"
       case "Liên hệ":
         return "#contact"
       default:

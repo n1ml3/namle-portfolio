@@ -26,18 +26,24 @@ export function Interests() {
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!isDragging.current || !scrollRef.current) return
     e.preventDefault()
+    
     const x = e.pageX - (scrollRef.current.offsetLeft || 0)
     const walk = (x - startX.current) * 2
     let newScrollLeft = scrollLeftStart.current - walk
 
-    // Loop during drag
     const oneThird = scrollRef.current.scrollWidth / 3
+    
+    // Seamless Jump during drag
     if (newScrollLeft >= 2 * oneThird) {
       newScrollLeft -= oneThird
-      scrollLeftStart.current -= oneThird
+      // Reset reference points to maintain drag momentum
+      startX.current = x
+      scrollLeftStart.current = newScrollLeft
     } else if (newScrollLeft <= 0) {
       newScrollLeft += oneThird
-      scrollLeftStart.current += oneThird
+      // Reset reference points to maintain drag momentum
+      startX.current = x
+      scrollLeftStart.current = newScrollLeft
     }
 
     scrollRef.current.scrollLeft = newScrollLeft

@@ -20,12 +20,28 @@ export function ScrollToTop() {
     return () => window.removeEventListener("scroll", toggleVisibility)
   }, [])
 
-  // Smooth scroll to top function
+  // Manual smooth scroll to top function using requestAnimationFrame for premium feel
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    })
+    const duration = 800 // ms
+    const startTime = performance.now()
+    const startPosition = window.scrollY
+
+    const animateScroll = (currentTime: number) => {
+      const timeElapsed = currentTime - startTime
+      const progress = Math.min(timeElapsed / duration, 1)
+
+      // Cubic Ease-Out function
+      const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3)
+      const currentPosition = startPosition * (1 - easeOutCubic(progress))
+
+      window.scrollTo(0, currentPosition)
+
+      if (progress < 1) {
+        requestAnimationFrame(animateScroll)
+      }
+    }
+
+    requestAnimationFrame(animateScroll)
   }
 
   return (
