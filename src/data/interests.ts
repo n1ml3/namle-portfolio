@@ -25,7 +25,7 @@ export const interests: Interest[] = [
     id: 3,
     title: "Resident Evil 7",
     category: "Trò chơi",
-    image: "https://i.redd.it/xq7xyf70ln271.jpg", // placeholder for horror
+    image: "https://i.redd.it/xq7xyf70ln271.jpg", 
     description: "Trải nghiệm kinh dị sinh tồn đỉnh cao tại dinh thự Baker."
   },
   {
@@ -39,7 +39,7 @@ export const interests: Interest[] = [
     id: 5,
     title: "Liên Minh Huyền Thoại",
     category: "Trò chơi",
-    image: "https://static0.polygonimages.com/wordpress/wp-content/uploads/sharedimages/2024/12/mixcollage-24-dec-2024-11-21-pm-8173.jpg", // placeholder for gaming
+    image: "https://static0.polygonimages.com/wordpress/wp-content/uploads/sharedimages/2024/12/mixcollage-24-dec-2024-11-21-pm-8173.jpg", 
     description: "Đấu trường trực tuyến với những trận chiến nảy lửa."
   }
 ]
