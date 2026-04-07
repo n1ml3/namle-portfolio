@@ -13,7 +13,7 @@ import { ScrollToTop } from "./components/ui/ScrollToTop"
 import { projects } from "./data/projects"
 import { skills } from "./data/skills"
 import { aboutStats } from "./data/about"
-
+import Chatbot from "./components/Chatbot"
 export default function Portfolio() {
   const [isDarkMode, setIsDarkMode] = useState(false)
 
@@ -55,6 +55,6 @@ export default function Portfolio() {
       <Contact />
       <Footer />
       <ScrollToTop />
-    </div>
-  )
+      <Chatbot />
+    </div>  )
 }
