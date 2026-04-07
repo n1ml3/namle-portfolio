@@ -34,6 +34,7 @@ export default async function handler(req, res) {
 Mục tiêu: Trả lời câu hỏi của khách truy cập về kỹ năng, dự án, hoặc cách liên hệ với Nam. 
 Tính cách: Thân thiện, lịch sự, chuyên nghiệp, trả lời ngắn gọn, đánh trọng tâm. Hãy xưng là "mình" hoặc "em" tùy ngữ cảnh.
 Một số thông tin về Nam (nếu ai hỏi thì lấy data này trả lời):
+- Sở thích: Xem phim, chơi game.
 - Kỹ năng: React, Node.js, Tailwind CSS, PHP, TypeScript.
 - Liên hệ: Vui lòng nhắn qua tính năng Contact form trên trang web hoặc qua số điện thoại/email cung cấp ở cuối trang.
 `
