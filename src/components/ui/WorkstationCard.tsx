@@ -1,4 +1,4 @@
-import { Cpu, MemoryStick, Zap, HardDrive, Keyboard, Mouse } from "lucide-react"
+import { Cpu, MemoryStick, Gpu, HardDrive, Keyboard, Mouse } from "lucide-react"
 import { AnimatedSection } from "./AnimatedSection"
 import type { HardwareSpec } from "../../types"
 
@@ -17,7 +17,7 @@ export function WorkstationCard() {
     {
       label: "GPU",
       value: "NVIDIA RTX 3050Ti 4GB laptop",
-      icon: Zap,
+      icon: Gpu,
     },
     {
       label: "SSD",
