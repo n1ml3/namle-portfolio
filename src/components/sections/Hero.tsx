@@ -1,7 +1,36 @@
 import { Eye } from "lucide-react"
 import { AnimatedSection } from "../ui/AnimatedSection"
+import { useTypewriter } from "../../hooks/useTypewriter"
+import { useScrollAnimation } from "../../hooks/useScrollAnimation"
 
 export function Hero() {
+  const { elementRef, isVisible } = useScrollAnimation<HTMLHeadingElement>()
+  const { displayText, isComplete } = useTypewriter({
+    text: "Xin chào, tôi là Le Duc Nam",
+    speed: 80,
+    delay: 500,
+    shouldStart: isVisible,
+  })
+
+  // Tìm vị trí của tên để tô màu
+  const namePart = "Le Duc Nam"
+  const basePart = "Xin chào, tôi là "
+  
+  const renderTitle = () => {
+    if (displayText.length <= basePart.length) {
+      return <span className={!isComplete ? "typing-cursor" : ""}>{displayText}</span>
+    }
+    
+    return (
+      <>
+        {basePart}
+        <span className={`text-blue-600 dark:text-blue-400 block ${!isComplete ? "typing-cursor" : ""}`}>
+          {displayText.slice(basePart.length)}
+        </span>
+      </>
+    )
+  }
+
   return (
     <section
       id="home"
@@ -10,12 +39,14 @@ export function Hero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center justify-between">
           <div className="lg:w-1/2 mb-10 lg:mb-0">
-            <AnimatedSection animation="slideLeft" delay={200}>
-              <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-                Xin chào, tôi là
-                <span className="text-blue-600 dark:text-blue-400 block">Le Duc Nam</span>
+            <div className="min-h-[120px] lg:min-h-[160px]"> {/* Tránh nhảy layout khi gõ chữ */}
+              <h1 
+                ref={elementRef}
+                className="text-4xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6"
+              >
+                {renderTitle()}
               </h1>
-            </AnimatedSection>
+            </div>
 
             <AnimatedSection animation="slideLeft" delay={400}>
               <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
