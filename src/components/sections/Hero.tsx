@@ -13,7 +13,7 @@ export function Hero() {
   })
 
   // Tìm vị trí của tên để tô màu
-  const namePart = "Le Duc Nam"
+  // const namePart = "Le Duc Nam"
   const basePart = "Xin chào, tôi là "
   
   const renderTitle = () => {
