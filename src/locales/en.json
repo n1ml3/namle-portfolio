@@ -13,8 +13,8 @@
     "name": "Le Duc Nam",
     "roles": ["Full-stack Developer", "ReactJS Intern", "UI/UX Enthusiast"],
     "biography": "I am a Full-stack Developer passionate about creating exceptional web experiences. Specialized in React, Node.js, and modern technologies.",
-    "cv_vi": "View Fullstack CV",
-    "cv_en": "View Tester CV"
+    "cv_fullstack": "View Fullstack CV",
+    "cv_tester": "View Tester CV"
   },
   "about": {
     "title": "About Me",
@@ -66,5 +66,8 @@
       "sending": "Sending...",
       "success": "Thank you! Your message has been sent successfully."
     }
+  },
+  "footer": {
+    "copyright": "© 2026 Portfolio. Made by Namle"
   }
 }

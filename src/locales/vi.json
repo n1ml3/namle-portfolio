@@ -13,8 +13,8 @@
     "name": "Lê Đức Nam",
     "roles": ["Full-stack Developer", "Intern ReactJS", "UI/UX Enthusiast"],
     "biography": "Tôi là một Full-stack Developer đam mê tạo ra những trải nghiệm web tuyệt vời. Chuyên về React, Node.js và các công nghệ hiện đại.",
-    "cv_vi": "Xem CV Fullstack",
-    "cv_en": "Xem CV Tester"
+    "cv_fullstack": "Xem CV Fullstack",
+    "cv_tester": "Xem CV Tester"
   },
   "about": {
     "title": "Giới thiệu về tôi",
@@ -66,5 +66,8 @@
       "sending": "Đang gửi...",
       "success": "Cảm ơn bạn! Tin nhắn của bạn đã được gửi thành công."
     }
+  },
+  "footer": {
+    "copyright": "© 2026 Portfolio. Được tạo với Namle"
   }
 }

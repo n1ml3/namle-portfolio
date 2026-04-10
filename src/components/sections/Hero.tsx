@@ -54,7 +54,7 @@ export function Hero() {
 
             <AnimatedSection animation="slideLeft" delay={400}>
               <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-                {t("hero.description")}
+                {t("hero.biography")}
               </p>
             </AnimatedSection>
 

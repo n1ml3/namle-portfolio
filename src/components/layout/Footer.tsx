@@ -1,5 +1,6 @@
 import { AnimatedSection } from "../ui/AnimatedSection"
 import { SocialLinks } from "../shared/SocialLinks"
+import { t } from "i18next"
 
 export function Footer() {
   return (
@@ -8,7 +9,7 @@ export function Footer() {
         <AnimatedSection animation="fadeIn" delay={100}>
           <div className="text-center">
             <p className="text-gray-400 dark:text-gray-500 mb-4">
-              © 2026 Portfolio. Được tạo với Namle
+              {t("footer.copyright")}
             </p>
             <SocialLinks />
           </div>
