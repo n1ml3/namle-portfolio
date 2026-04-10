@@ -1,10 +1,11 @@
 "use client"
 
 import type React from "react"
-
 import { type FormEvent, useState } from "react"
+import { useTranslation } from "react-i18next"
 
 export function ContactForm() {
+  const { t } = useTranslation()
   const [formState, setFormState] = useState({
     name: "",
     email: "",
@@ -25,7 +26,7 @@ export function ContactForm() {
     // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 1000))
 
-    setSubmitMessage("Cảm ơn bạn! Tin nhắn của bạn đã được gửi thành công.")
+    setSubmitMessage(t("contact.form.success"))
     setFormState({ name: "", email: "", message: "" })
     setIsSubmitting(false)
 
@@ -39,7 +40,7 @@ export function ContactForm() {
     <form className="space-y-6" onSubmit={handleSubmit}>
       <div>
         <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-          Họ và tên
+          {t("contact.form.nameLabel")}
         </label>
         <input
           type="text"
@@ -49,12 +50,12 @@ export function ContactForm() {
           onChange={handleChange}
           required
           className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent transition-all duration-200 hover:scale-105 focus:scale-105"
-          placeholder="Nhập họ và tên của bạn"
+          placeholder={t("contact.form.namePlaceholder")}
         />
       </div>
       <div>
         <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-          Email
+          {t("contact.form.emailLabel")}
         </label>
         <input
           type="email"
@@ -64,12 +65,12 @@ export function ContactForm() {
           onChange={handleChange}
           required
           className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent transition-all duration-200 hover:scale-105 focus:scale-105"
-          placeholder="Nhập email của bạn"
+          placeholder={t("contact.form.emailPlaceholder")}
         />
       </div>
       <div>
         <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-          Tin nhắn
+          {t("contact.form.messageLabel")}
         </label>
         <textarea
           id="message"
@@ -79,7 +80,7 @@ export function ContactForm() {
           rows={5}
           required
           className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent transition-all duration-200 hover:scale-105 focus:scale-105"
-          placeholder="Nhập tin nhắn của bạn"
+          placeholder={t("contact.form.messagePlaceholder")}
         ></textarea>
       </div>
       <button
@@ -87,7 +88,7 @@ export function ContactForm() {
         disabled={isSubmitting}
         className="w-full bg-blue-600 dark:bg-blue-500 text-white py-3 px-6 rounded-lg hover:bg-blue-700 dark:hover:bg-blue-600 transition-all duration-200 font-semibold hover:scale-105 transform disabled:opacity-70 disabled:cursor-not-allowed"
       >
-        {isSubmitting ? "Đang gửi..." : "Gửi tin nhắn"}
+        {isSubmitting ? t("contact.form.sending") : t("contact.form.sendButton")}
       </button>
 
       {submitMessage && (

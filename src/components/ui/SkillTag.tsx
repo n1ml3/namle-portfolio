@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next"
 import { AnimatedSection } from "./AnimatedSection"
 import type { Skill } from "../../types"
 
@@ -9,6 +10,7 @@ interface SkillTagProps {
 
 export function SkillTag({ skill, color, delay }: SkillTagProps) {
   const Icon = skill.icon
+  const { t } = useTranslation()
 
   const getColorClasses = () => {
     switch (color) {
@@ -28,12 +30,8 @@ export function SkillTag({ skill, color, delay }: SkillTagProps) {
   }
 
   const getLevelLabel = (level?: string) => {
-    switch (level) {
-      case "Advanced": return "Nâng cao"
-      case "Intermediate": return "Thành thạo"
-      case "Beginner": return "Cơ bản"
-      default: return ""
-    }
+    if (!level) return ""
+    return t(`skills.levels.${level}`, level)
   }
 
   return (

@@ -1,9 +1,11 @@
+import { useTranslation } from "react-i18next"
 import { AnimatedSection } from "../ui/AnimatedSection"
 import { ContactInfo } from "../ui/ContactInfo"
 import { ContactForm } from "../ui/ContactForm"
 import { Mail, Github, Linkedin } from "lucide-react"
 
 export function Contact() {
+  const { t } = useTranslation()
   const contactItems = [
     { icon: Mail, title: "Email", value: "namle26022004@gmail.com", link: "mailto:namle26022004@gmail.com" },
     { icon: Github, title: "GitHub", value: "github.com/n1ml3", link: "https://github.com/n1ml3" },
@@ -15,9 +17,9 @@ export function Contact() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection animation="fadeIn" delay={100}>
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Liên hệ với tôi</h2>
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">{t("contact.title")}</h2>
             <p className="text-xl text-gray-600 dark:text-gray-300">
-              Hãy kết nối và thảo luận về dự án tiếp theo của bạn
+              {t("contact.subtitle")}
             </p>
           </div>
         </AnimatedSection>

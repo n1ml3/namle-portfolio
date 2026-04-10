@@ -2,7 +2,9 @@
 
 import { useState } from "react"
 import { Menu, X, Sun, Moon } from "lucide-react"
+import { useTranslation } from "react-i18next"
 import { AnimatedSection } from "../ui/AnimatedSection"
+import { LanguageSwitcher } from "../ui/LanguageSwitcher"
 
 interface NavbarProps {
   isDarkMode: boolean
@@ -12,26 +14,37 @@ interface NavbarProps {
 export function Navbar({ isDarkMode, toggleTheme }: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
+  const { t } = useTranslation()
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
   }
 
-  const navItems = ["Trang chủ", "Giới thiệu", "Góc làm việc", "Kỹ năng", "Dự án", "Sở thích", "Liên hệ"]
-  const getHref = (item: string) => {
-    switch (item) {
-      case "Trang chủ":
+  const navItems = [
+    { key: "home", label: t("nav.home") },
+    { key: "about", label: t("nav.about") },
+    { key: "workstation", label: t("nav.workstation") },
+    { key: "skills", label: t("nav.skills") },
+    { key: "projects", label: t("nav.projects") },
+    { key: "interests", label: t("nav.interests") },
+    { key: "contact", label: t("nav.contact") },
+  ]
+
+  const getHref = (key: string) => {
+    switch (key) {
+      case "home":
         return "#home"
-      case "Giới thiệu":
+      case "about":
         return "#about"
-      case "Kỹ năng":
+      case "skills":
         return "#skills"
-      case "Dự án":
+      case "projects":
         return "#projects"
-      case "Sở thích":
+      case "interests":
         return "#interests"
-      case "Góc làm việc":
+      case "workstation":
         return "#workstation"
-      case "Liên hệ":
+      case "contact":
         return "#contact"
       default:
         return "#"
@@ -49,29 +62,38 @@ export function Navbar({ isDarkMode, toggleTheme }: NavbarProps) {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item, index) => (
-              <AnimatedSection key={item} animation="fadeIn" delay={200 + index * 100}>
+              <AnimatedSection key={item.key} animation="fadeIn" delay={200 + index * 100}>
                 <a
-                  href={getHref(item)}
+                  href={getHref(item.key)}
                   className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                 >
-                  {item}
+                  {item.label}
                 </a>
               </AnimatedSection>
             ))}
 
-            <AnimatedSection animation="scaleIn" delay={700}>
-              <button
-                onClick={toggleTheme}
-                className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-                aria-label="Toggle theme"
-              >
-                {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
-              </button>
-            </AnimatedSection>
+            <div className="flex items-center space-x-4">
+              <AnimatedSection animation="scaleIn" delay={700}>
+                <LanguageSwitcher />
+              </AnimatedSection>
+
+              <AnimatedSection animation="scaleIn" delay={800}>
+                <button
+                  onClick={toggleTheme}
+                  className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                  aria-label="Toggle theme"
+                >
+                  {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
+                </button>
+              </AnimatedSection>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-2">
+            <AnimatedSection animation="scaleIn" delay={150}>
+              <LanguageSwitcher />
+            </AnimatedSection>
             <AnimatedSection animation="scaleIn" delay={200}>
               <button
                 onClick={toggleTheme}
@@ -97,12 +119,12 @@ export function Navbar({ isDarkMode, toggleTheme }: NavbarProps) {
           <div className="md:hidden py-4 border-t border-gray-100 dark:border-gray-800">
             <div className="flex flex-col space-y-4">
               {navItems.map((item, index) => (
-                <AnimatedSection key={item} animation="slideLeft" delay={index * 100}>
+                <AnimatedSection key={item.key} animation="slideLeft" delay={index * 100}>
                   <a
-                    href={getHref(item)}
+                    href={getHref(item.key)}
                     className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                   >
-                    {item}
+                    {item.label}
                   </a>
                 </AnimatedSection>
               ))}

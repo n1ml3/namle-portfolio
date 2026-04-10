@@ -16,9 +16,11 @@
   "dependencies": {
     "@google/genai": "^1.48.0",
     "@google/generative-ai": "^0.24.1",
+    "i18next": "^26.0.4",
     "lucide-react": "^0.513.0",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "react-i18next": "^17.0.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",

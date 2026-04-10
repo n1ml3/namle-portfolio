@@ -1,20 +1,24 @@
 import { Eye } from "lucide-react"
+import { useTranslation } from "react-i18next"
 import { AnimatedSection } from "../ui/AnimatedSection"
 import { useTypewriter } from "../../hooks/useTypewriter"
 import { useScrollAnimation } from "../../hooks/useScrollAnimation"
 
 export function Hero() {
+  const { t } = useTranslation()
   const { elementRef, isVisible } = useScrollAnimation<HTMLHeadingElement>()
+  
+  const basePart = t("hero.welcome")
+  const namePart = t("hero.name")
+  const fullText = basePart + namePart
+
   const { displayText, isComplete } = useTypewriter({
-    text: "Xin chào, tôi là Le Duc Nam",
+    text: fullText,
     speed: 80,
     delay: 500,
     shouldStart: isVisible,
   })
 
-  // Tìm vị trí của tên để tô màu
-  // const namePart = "Le Duc Nam"
-  const basePart = "Xin chào, tôi là "
   
   const renderTitle = () => {
     if (displayText.length <= basePart.length) {
@@ -50,8 +54,7 @@ export function Hero() {
 
             <AnimatedSection animation="slideLeft" delay={400}>
               <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-                Tôi là một Full-stack Developer đam mê tạo ra những trải nghiệm web tuyệt vời. Chuyên về React, Node.js
-                và các công nghệ hiện đại.
+                {t("hero.description")}
               </p>
             </AnimatedSection>
 
@@ -64,7 +67,7 @@ export function Hero() {
                   className="border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 px-8 py-3 rounded-lg hover:bg-blue-600 dark:hover:bg-blue-400 hover:text-white dark:hover:text-white transition-colors flex items-center justify-center gap-2 hover:scale-105 transform duration-200"
                 >
                   <Eye size={20} />
-                  Xem CV Fullstack
+                  {t("hero.cv_fullstack")}
                 </a>
                 <a 
                   href="/cv2.pdf"
@@ -73,7 +76,7 @@ export function Hero() {
                   className="border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 px-8 py-3 rounded-lg hover:bg-blue-600 dark:hover:bg-blue-400 hover:text-white dark:hover:text-white transition-colors flex items-center justify-center gap-2 hover:scale-105 transform duration-200"
                 >
                   <Eye size={20} />
-                  Xem CV Tester
+                  {t("hero.cv_tester")}
                 </a>
               </div>
             </AnimatedSection>

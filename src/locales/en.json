@@ -1,0 +1,70 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "workstation": "Workstation",
+    "skills": "Skills",
+    "projects": "Projects",
+    "interests": "Interests",
+    "contact": "Contact"
+  },
+  "hero": {
+    "welcome": "Hi, I'm ",
+    "name": "Le Duc Nam",
+    "roles": ["Full-stack Developer", "ReactJS Intern", "UI/UX Enthusiast"],
+    "biography": "I am a Full-stack Developer passionate about creating exceptional web experiences. Specialized in React, Node.js, and modern technologies.",
+    "cv_vi": "View Fullstack CV",
+    "cv_en": "View Tester CV"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "Have a great passion for fullstack programming, love exploring new libraries. Always striving to learn and develop myself every day.",
+    "story_title": "My Story",
+    "story_p1": "I started my programming journey in 2022 with a passion for creating meaningful products. Over time, I've developed skills in various areas from frontend to backend system development. Built multiple web applications using various technologies.",
+    "story_p2": "I'm always looking for new challenges and opportunities to learn cutting-edge technologies. My goal is to create products that are not only visually appealing but also provide practical value."
+  },
+  "workstation": {
+    "title": "My Workstation",
+    "label": "Configuration",
+    "specs": {
+      "cpu": "CPU",
+      "ram": "RAM",
+      "gpu": "GPU",
+      "ssd": "SSD",
+      "monitor": "Monitor",
+      "kb": "Keyboard",
+      "mouse": "Mouse"
+    }
+  },
+  "skills": {
+    "title": "My Skills",
+    "subtitle": "Technologies and skills I use to create great products (4th Year Intern)",
+    "levels": {
+      "Beginner": "Beginner",
+      "Intermediate": "Intermediate",
+      "Advanced": "Advanced"
+    },
+    "categories": {
+      "Frontend": "Frontend",
+      "Backend": "Backend",
+      "Database": "Database",
+      "DevOps & Tools": "DevOps & Tools",
+      "Machine Learning": "Machine Learning"
+    }
+  },
+  "contact": {
+    "title": "Contact Me",
+    "subtitle": "Let's connect and discuss your next project",
+    "form": {
+      "nameLabel": "Full Name",
+      "namePlaceholder": "Enter your full name",
+      "emailLabel": "Email",
+      "emailPlaceholder": "Enter your email",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Enter your message",
+      "sendButton": "Send Message",
+      "sending": "Sending...",
+      "success": "Thank you! Your message has been sent successfully."
+    }
+  }
+}

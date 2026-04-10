@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next"
 import { AnimatedSection } from "../ui/AnimatedSection"
 import { StatItem } from "../ui/StatItem"
 
@@ -11,14 +12,16 @@ interface AboutProps {
 }
 
 export function About({ stats }: AboutProps) {
+  const { t } = useTranslation()
+
   return (
     <section id="about" className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection animation="fadeIn" delay={100}>
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Giới thiệu về tôi</h2>
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">{t("about.title")}</h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Có niềm đam mê to lớn với lập trình fullstack, yêu thích tìm hiểu các thư viện mới. Luôn cố gắng học hỏi và phát triển bản thân mỗi ngày.
+              {t("about.description")}
             </p>
           </div>
         </AnimatedSection>
@@ -34,20 +37,18 @@ export function About({ stats }: AboutProps) {
 
           <div>
             <AnimatedSection animation="slideRight" delay={300}>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Câu chuyện của tôi</h3>
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">{t("about.story_title")}</h3>
             </AnimatedSection>
 
             <AnimatedSection animation="slideRight" delay={400}>
               <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                Tôi bắt đầu hành trình lập trình từ năm 2022 với niềm đam mê tạo ra những sản phẩm có ý nghĩa. Qua thời
-                gian, tôi đã phát triển kỹ năng trong nhiều lĩnh vực từ frontend, phát triển hệ thống backend. Xây dựng nhiều ứng dụng web có áp dụng nhiều công nghệ khác nhau.
+                {t("about.story_p1")}
               </p>
             </AnimatedSection>
 
             <AnimatedSection animation="slideRight" delay={500}>
               <p className="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-                Tôi luôn tìm kiếm những thách thức mới và cơ hội để học hỏi các công nghệ tiên tiến. Mục tiêu của tôi là
-                tạo ra những sản phẩm không chỉ đẹp mắt mà còn mang lại giá trị thực tế.
+                {t("about.story_p2")}
               </p>
             </AnimatedSection>
 

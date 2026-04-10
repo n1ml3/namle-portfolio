@@ -1,36 +1,39 @@
 import { Cpu, MemoryStick, Gpu, HardDrive, Keyboard, Mouse } from "lucide-react"
+import { useTranslation } from "react-i18next"
 import { AnimatedSection } from "./AnimatedSection"
-import type { HardwareSpec } from "../../types"
+// import type { HardwareSpec } from "../../types"
 
 export function WorkstationCard() {
-  const specs: HardwareSpec[] = [
+  const { t } = useTranslation()
+  
+  const specs = [
     {
-      label: "CPU",
+      label: t("workstation.specs.cpu"),
       value: "Intel Core i5 12500H",
       icon: Cpu,
     },
     {
-      label: "RAM",
+      label: t("workstation.specs.ram"),
       value: "16GB DDR4 3200MHz",
       icon: MemoryStick,
     },
     {
-      label: "GPU",
+      label: t("workstation.specs.gpu"),
       value: "NVIDIA RTX 3050Ti 4GB laptop",
       icon: Gpu,
     },
     {
-      label: "SSD",
+      label: t("workstation.specs.ssd"),
       value: "Crucial NVMe 500GB",
       icon: HardDrive,
     },
     {
-      label: "Bàn phím",
+      label: t("workstation.specs.kb"),
       value: "K550v4 TKL",
       icon: Keyboard,
     },
     {
-      label: "Chuột",
+      label: t("workstation.specs.mouse"),
       value: "TUF gaming M3 Gen II",
       icon: Mouse,
     },

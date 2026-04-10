@@ -1,0 +1,70 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "workstation": "Góc làm việc",
+    "skills": "Kỹ năng",
+    "projects": "Dự án",
+    "interests": "Sở thích",
+    "contact": "Liên hệ"
+  },
+  "hero": {
+    "welcome": "Xin chào, tôi là ",
+    "name": "Lê Đức Nam",
+    "roles": ["Full-stack Developer", "Intern ReactJS", "UI/UX Enthusiast"],
+    "biography": "Tôi là một Full-stack Developer đam mê tạo ra những trải nghiệm web tuyệt vời. Chuyên về React, Node.js và các công nghệ hiện đại.",
+    "cv_vi": "Xem CV Fullstack",
+    "cv_en": "Xem CV Tester"
+  },
+  "about": {
+    "title": "Giới thiệu về tôi",
+    "description": "Có niềm đam mê to lớn với lập trình fullstack, yêu thích tìm hiểu các thư viện mới. Luôn cố gắng học hỏi và phát triển bản thân mỗi ngày.",
+    "story_title": "Câu chuyện của tôi",
+    "story_p1": "Tôi bắt đầu hành trình lập trình từ năm 2022 với niềm đam mê tạo ra những sản phẩm có ý nghĩa. Qua thời gian, tôi đã phát triển kỹ năng trong nhiều lĩnh vực từ frontend, phát triển hệ thống backend. Xây dựng nhiều ứng dụng web có áp dụng nhiều công nghệ khác nhau.",
+    "story_p2": "Tôi luôn tìm kiếm những thách thức mới và cơ hội để học hỏi các công nghệ tiên tiến. Mục tiêu của tôi là tạo ra những sản phẩm không chỉ đẹp mắt mà còn mang lại giá trị thực tế."
+  },
+  "workstation": {
+    "title": "Góc làm việc của tôi",
+    "label": "Cấu hình",
+    "specs": {
+      "cpu": "CPU",
+      "ram": "RAM",
+      "gpu": "GPU",
+      "ssd": "SSD",
+      "monitor": "Màn hình",
+      "kb": "Bàn phím",
+      "mouse": "Chuột"
+    }
+  },
+  "skills": {
+    "title": "Kỹ năng của tôi",
+    "subtitle": "Các công nghệ và kỹ năng tôi sử dụng để tạo ra những sản phẩm tuyệt vời (Thực tập sinh năm 4)",
+    "levels": {
+      "Beginner": "Cơ bản",
+      "Intermediate": "Thành thạo",
+      "Advanced": "Nâng cao"
+    },
+    "categories": {
+      "Frontend": "Frontend",
+      "Backend": "Backend",
+      "Database": "Cơ sở dữ liệu",
+      "DevOps & Tools": "DevOps & Công cụ",
+      "Machine Learning": "Machine Learning"
+    }
+  },
+  "contact": {
+    "title": "Liên hệ với tôi",
+    "subtitle": "Hãy kết nối và thảo luận về dự án tiếp theo của bạn",
+    "form": {
+      "nameLabel": "Họ và tên",
+      "namePlaceholder": "Nhập họ và tên của bạn",
+      "emailLabel": "Email",
+      "emailPlaceholder": "Nhập email của bạn",
+      "messageLabel": "Tin nhắn",
+      "messagePlaceholder": "Nhập tin nhắn của bạn",
+      "sendButton": "Gửi tin nhắn",
+      "sending": "Đang gửi...",
+      "success": "Cảm ơn bạn! Tin nhắn của bạn đã được gửi thành công."
+    }
+  }
+}

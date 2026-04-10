@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next"
 import { AnimatedSection } from "../ui/AnimatedSection"
 import { SkillTag } from "../ui/SkillTag"
 import type { Skill, SkillCategory } from "../../types"
@@ -11,6 +12,7 @@ interface SkillsProps {
 
 export function Skills({ skills }: SkillsProps) {
   const { categories } = skills
+  const { t } = useTranslation()
 
   const getCategoryColor = (color: string) => {
     switch (color) {
@@ -28,9 +30,9 @@ export function Skills({ skills }: SkillsProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection animation="fadeIn" delay={100}>
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Kỹ năng của tôi</h2>
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">{t("skills.title")}</h2>
             <p className="text-xl text-gray-600 dark:text-gray-300">
-              Các công nghệ và kỹ năng tôi sử dụng để tạo ra những sản phẩm tuyệt vời (Thực tập sinh năm 4)
+              {t("skills.subtitle")}
             </p>
           </div>
         </AnimatedSection>
@@ -41,7 +43,7 @@ export function Skills({ skills }: SkillsProps) {
               <div className="bg-white dark:bg-gray-900/50 p-8 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm transition-all duration-300">
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
                   <span className={`w-2 h-8 rounded-full mr-4 ${getCategoryColor(category.color)}`}></span>
-                  {category.name}
+                  {t(`skills.categories.${category.name}`, category.name)}
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {category.skills.map((skill, skillIndex) => (
