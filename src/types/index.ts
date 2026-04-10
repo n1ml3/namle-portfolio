@@ -12,12 +12,13 @@ export interface Project {
 export interface Skill {
   name: string
   icon: LucideIcon
+  level?: "Beginner" | "Intermediate" | "Advanced"
 }
 
 export interface SkillCategory {
   name: string
   color: string
-  items: string[]
+  skills: Skill[]
 }
 export interface HardwareSpec {
   label: string
