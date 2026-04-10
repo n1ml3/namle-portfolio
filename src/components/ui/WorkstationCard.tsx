@@ -2,10 +2,6 @@ import { Cpu, MemoryStick, Zap, HardDrive, Keyboard, Mouse } from "lucide-react"
 import { AnimatedSection } from "./AnimatedSection"
 import type { HardwareSpec } from "../../types"
 
-/**
- * Este componente muestra la configuración del hardware de manera elegante.
- * Se utiliza una cuadrícula para que la información sea fácil de leer y se mantenga la consistencia con el diseño del sitio.
- */
 export function WorkstationCard() {
   const specs: HardwareSpec[] = [
     {
@@ -41,9 +37,7 @@ export function WorkstationCard() {
   ]
 
   return (
-    <div className="mt-12 group">
-      <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">Cấu hình làm việc</h3>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
         {specs.map((spec, index) => (
           <AnimatedSection key={spec.label} animation="scaleIn" delay={100 * index}>
             <div className="bg-gray-50 dark:bg-gray-800/50 p-6 rounded-2xl border border-gray-100 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300 shadow-sm hover:shadow-md">
@@ -64,6 +58,5 @@ export function WorkstationCard() {
           </AnimatedSection>
         ))}
       </div>
-    </div>
   )
 }

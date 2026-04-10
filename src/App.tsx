@@ -9,6 +9,7 @@ import { Skills } from "./components/sections/Skills"
 import { Projects } from "./components/sections/Projects"
 import { Contact } from "./components/sections/Contact"
 import { Interests } from "./components/sections/Interests"
+import { Workstation } from "./components/sections/Workstation"
 import { ScrollToTop } from "./components/ui/ScrollToTop"
 import { projects } from "./data/projects"
 import { skills } from "./data/skills"
@@ -49,6 +50,7 @@ export default function Portfolio() {
       <Navbar isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
       <Hero />
       <About stats={aboutStats} />
+      <Workstation />
       <Skills skills={skills} />
       <Projects projects={projects} />
       <Interests />

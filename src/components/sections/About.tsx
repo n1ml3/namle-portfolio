@@ -1,6 +1,5 @@
 import { AnimatedSection } from "../ui/AnimatedSection"
 import { StatItem } from "../ui/StatItem"
-import { WorkstationCard } from "../ui/WorkstationCard"
 
 export interface Stat {
   label: string
@@ -60,10 +59,6 @@ export function About({ stats }: AboutProps) {
               </div>
             </AnimatedSection>
           </div>
-        </div>
-
-        <div className="border-t border-gray-100 dark:border-gray-800 pt-12">
-          <WorkstationCard />
         </div>
       </div>
     </section>
