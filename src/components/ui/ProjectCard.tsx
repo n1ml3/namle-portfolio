@@ -9,8 +9,8 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project, index }: ProjectCardProps) {
   return (
-    <AnimatedSection animation="slideUp" delay={200 + index * 150}>
-      <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-2xl overflow-hidden hover:shadow-xl dark:hover:shadow-2xl transition-all duration-300 hover:scale-105 group">
+    <AnimatedSection animation="slideUp" delay={200 + index * 150} className="h-full">
+      <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-2xl overflow-hidden hover:shadow-xl dark:hover:shadow-2xl transition-all duration-300 hover:scale-105 group h-full flex flex-col">
         <div className="overflow-hidden">
           <img
             src={project.image || "/placeholder.svg"}
@@ -18,7 +18,8 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
           />
         </div>
-        <div className="p-6">
+        {/* Phần nội dung chính được đặt flex-grow để chiếm không gian trống */}
+        <div className="p-6 flex-grow flex flex-col">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">{project.title}</h3>
           <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">{project.description}</p>
 
@@ -33,7 +34,8 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             ))}
           </div>
 
-          <div className="flex gap-4">
+          {/* mt-auto đẩy phần liên kết xuống đáy card */}
+          <div className="flex gap-4 mt-auto">
             <a
               href={project.github}
               className="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors hover:scale-110 transform duration-200"
