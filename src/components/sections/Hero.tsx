@@ -78,6 +78,15 @@ export function Hero() {
                   <FileUser size={20} />
                   {t("hero.cv_tester")}
                 </a>
+                <a
+                  href="/cv3.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 px-8 py-3 rounded-lg hover:bg-blue-600 dark:hover:bg-blue-400 hover:text-white dark:hover:text-white transition-colors flex items-center justify-center gap-2 hover:scale-105 transform duration-200"
+                >
+                  <FileUser size={20} />
+                  {t("hero.cv_helpdesk")}
+                </a>
               </div>
             </AnimatedSection>
           </div>

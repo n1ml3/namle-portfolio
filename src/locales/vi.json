@@ -14,7 +14,8 @@
     "roles": ["Full-stack Developer", "Intern ReactJS", "UI/UX Enthusiast"],
     "biography": "Tôi là một Full-stack Developer đam mê tạo ra những trải nghiệm web tuyệt vời. Chuyên về React, Node.js và các công nghệ hiện đại.",
     "cv_fullstack": "Xem CV Fullstack",
-    "cv_tester": "Xem CV Tester"
+    "cv_tester": "Xem CV Tester",
+    "cv_helpdesk": "CV IT helpdesk"
   },
   "about": {
     "title": "Giới thiệu về tôi",

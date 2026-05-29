@@ -14,7 +14,8 @@
     "roles": ["Full-stack Developer", "ReactJS Intern", "UI/UX Enthusiast"],
     "biography": "I am a Full-stack Developer passionate about creating exceptional web experiences. Specialized in React, Node.js, and modern technologies.",
     "cv_fullstack": "View Fullstack CV",
-    "cv_tester": "View Tester CV"
+    "cv_tester": "View Tester CV",
+    "cv_helpdesk": "View IT Helpdesk CV"
   },
   "about": {
     "title": "About Me",
