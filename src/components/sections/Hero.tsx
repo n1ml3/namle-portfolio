@@ -7,7 +7,7 @@ import { useScrollAnimation } from "../../hooks/useScrollAnimation"
 export function Hero() {
   const { t } = useTranslation()
   const { elementRef, isVisible } = useScrollAnimation<HTMLHeadingElement>()
-  
+
   const basePart = t("hero.welcome")
   const namePart = t("hero.name")
   const fullText = basePart + namePart
@@ -19,12 +19,12 @@ export function Hero() {
     shouldStart: isVisible,
   })
 
-  
+
   const renderTitle = () => {
     if (displayText.length <= basePart.length) {
       return <span className={!isComplete ? "typing-cursor" : ""}>{displayText}</span>
     }
-    
+
     return (
       <>
         {basePart}
@@ -44,7 +44,7 @@ export function Hero() {
         <div className="flex flex-col lg:flex-row items-center justify-between">
           <div className="lg:w-1/2 mb-10 lg:mb-0">
             <div className="min-h-[120px] lg:min-h-[160px]"> {/* Tránh nhảy layout khi gõ chữ */}
-              <h1 
+              <h1
                 ref={elementRef}
                 className="text-4xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6"
               >
@@ -60,7 +60,7 @@ export function Hero() {
 
             <AnimatedSection animation="slideLeft" delay={600}>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a 
+                <a
                   href="/cv.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -69,7 +69,7 @@ export function Hero() {
                   <FileUser size={20} />
                   {t("hero.cv_fullstack")}
                 </a>
-                <a 
+                <a
                   href="/cv2.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -86,6 +86,15 @@ export function Hero() {
                 >
                   <FileUser size={20} />
                   {t("hero.cv_helpdesk")}
+                </a>
+                <a
+                  href="/cv4.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 px-8 py-3 rounded-lg hover:bg-blue-600 dark:hover:bg-blue-400 hover:text-white dark:hover:text-white transition-colors flex items-center justify-center gap-2 hover:scale-105 transform duration-200"
+                >
+                  <FileUser size={20} />
+                  {t("hero.cv_workpress")}
                 </a>
               </div>
             </AnimatedSection>
